@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Data Display</title>
+</head>
+<body>
+    <h1>State Meaningful Use Data</h1>
+    <table>
+        <tr>
+            <th>State</th>
+            <th>Percentage</th>
+        </tr>
+        <tr th:each="data : ${dataList}">
+            <td th:text="${data.state}"></td>
+            <td th:text="${data.pctHospitalMu}"></td>
+        </tr>
+    </table>
+</body>
+</html>
